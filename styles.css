@@ -1,0 +1,203 @@
+/* General body styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle, #ffe4e1, #ff9a9e);
+  font-family: "Nunito", sans-serif;
+  overflow: hidden;
+}
+
+/* Container styling */
+.container {
+  text-align: center;
+  padding: 30px;
+  background: rgba(212, 143, 212, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  transform: translateY(-50px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px; /* Add margin for better spacing */
+}
+
+/* Header text styling */
+.header_text {
+  font-family: "Nunito", sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  color: #ff4b5c;
+  /* text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); */
+  margin: 20px 0;
+  letter-spacing: 1px;
+  /* animation: textGlow 2s ease-in-out infinite alternate; */
+}
+
+/* GIF container styling */
+.gif_container img {
+  max-width: 100%;
+  max-height: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gif_container img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Button container styling */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Adjust gap for spacing */
+  margin-top: 25px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  row-gap: 20px; /* Adds vertical gap between buttons */
+}
+
+/* Button styling */
+.btn {
+  background: linear-gradient(135deg, #ffe4e1, #fcd1d1);
+  color: #ff4b5c;
+  padding: 18px 36px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  color: #000000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.15);
+}
+
+/* No button animation and styling */
+#noButton {
+  position: absolute;
+  transition: transform 0.5s ease, top 0.3s ease, left 0.3s ease;
+  transition-timing-function: ease-out;
+}
+
+/* Yes button special styling */
+#yesButton {
+  background: linear-gradient(135deg, #e3073b, #7ded37);
+  color: #fff;
+}
+
+#yesButton:hover {
+  background: linear-gradient(135deg, #7f1215, #e64a39);
+}
+
+/* Hover effect for "No" button */
+#noButton:hover {
+  cursor: pointer;
+  background: linear-gradient(135deg, #dc3a3a, #ff99a7);
+  color: rgb(0, 0, 0);
+}
+
+/* Keyframe for glowing text */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px #ff6f91, 0 0 20px #ff6f91, 0 0 30px #ff6f91,
+      0 0 40px #ff6f91;
+  }
+  100% {
+    text-shadow: 0 0 15px #ff6f91, 0 0 25px #ff6f91, 0 0 35px #ff6f91,
+      0 0 45px #ff6f91;
+  }
+}
+
+/* Keyframe for fade-in animation for container */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1024px) {
+  /* On medium devices (tablets) */
+  .header_text {
+    font-size: 32px;
+  }
+
+  .btn {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+
+  .gif_container img {
+    max-height: 300px;
+  }
+
+  .container {
+    padding: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* On small devices (portrait tablets) */
+  .header_text {
+    font-size: 28px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .gif_container img {
+    max-height: 250px;
+  }
+
+  .buttons {
+    gap: 20px; /* Reducing gap between buttons */
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  /* On very small devices (smartphones) */
+  .header_text {
+    font-size: 24px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .gif_container img {
+    max-height: 200px;
+  }
+
+  .buttons {
+    gap: 15px; /* Adjusting for small screens */
+  }
+
+  .container {
+    padding: 15px;
+    margin: 10px; /* Reducing margin */
+  }
+}

@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do You Love Me?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Shruti, Do You Love Me ?</h1>
+        <h2 class="header_text">Are you free for a magical date?</h2>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif"
+          alt="Adorable illustration of love"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">
+          Yes, Absolutely!
+        </button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+        >
+          No
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function nextPage() {
+        alert("Yay! Can't wait to see you! ❤");
+        window.location.href = "yes.html";
+      }
+
+      function moveButton() {
+        const noButton = document.getElementById("noButton");
+        const maxWidth = window.innerWidth - noButton.offsetWidth - 10;
+        const maxHeight = window.innerHeight - noButton.offsetHeight - 10;
+
+        const x = Math.random() * maxWidth;
+        const y = Math.random() * maxHeight;
+
+        noButton.style.left = `${x}px`;
+        noButton.style.top = `${y}px`;
+      }
+    </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do You Love Me?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Shruti, Do You Love Me ?</h1>
+        <h2 class="header_text">Are you free for a magical date?</h2>
+        <!-- <p class="love_message">I hope this little question makes you smile, because you mean the world to me! 💖</p> -->
+        <p class="love_quote">"Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day." - Bhushan 💖</p>
+
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif"
+          alt="Adorable illustration of love"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">
+          Yes, Absolutely! 💖
+        </button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+        >
+          No... 😢
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function nextPage() {
+        alert("Yay! Can't wait to see you! ❤");
+        window.location.href = "yes.html";
+      }
+
+      function moveButton() {
+        const noButton = document.getElementById("noButton");
+        const maxWidth = window.innerWidth - noButton.offsetWidth - 10;
+        const maxHeight = window.innerHeight - noButton.offsetHeight - 10;
+
+        const x = Math.random() * maxWidth;
+        const y = Math.random() * maxHeight;
+
+        noButton.style.left = `${x}px`;
+        noButton.style.top = `${y}px`;
+
+        // Optional: You could add a small alert or animation when the "No" button is clicked and moved
+        // alert("Are you sure? I'm feeling heartbroken... 💔");
+      }
+    </script>
+  </body>
+</html>
+
